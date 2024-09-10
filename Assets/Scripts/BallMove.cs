@@ -7,8 +7,8 @@ public class BallMove : MonoBehaviour
 {
     [SerializeField] private float _initialSpeed = 10;
     [SerializeField] private float _increaseSpeed = 0.25f;
-    [SerializeField] private Text _playerScoreText;
-    [SerializeField] private Text _AIText;
+    
+    public ScoreManager scoreManager;
 
     private int hitCounter;
     private Rigidbody2D _rb;
@@ -73,12 +73,12 @@ public class BallMove : MonoBehaviour
         if (transform.position.x > 0)
         {
             ResetBall();
-            _playerScoreText.text = (int.Parse(_playerScoreText.text) +1).ToString();
+            scoreManager.PlayerGoal();
         }
         else if (transform.position.x < 0)
         {
             ResetBall();
-            _AIText.text = (int.Parse(_AIText.text) + 1).ToString();
+            scoreManager.AIGoal();
         }
     }
 }

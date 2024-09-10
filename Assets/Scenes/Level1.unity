@@ -836,6 +836,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 787554441}
+  - component: {fileID: 787554442}
   m_Layer: 0
   m_Name: Borders
   m_TagString: Untagged
@@ -863,6 +864,20 @@ Transform:
   - {fileID: 1984870266}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &787554442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787554440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f410ceed9140bf34794409313e047585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSccoreTXT: {fileID: 640996485}
+  AIScoreTXT: {fileID: 1033714072}
 --- !u!1 &905477284
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,7 +1491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f045c166c7e6647b6e14f7d0603452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 7
+  _moveSpeed: 4
   _isAI: 1
   _ball: {fileID: 2126430027}
 --- !u!1 &1883239794
@@ -1849,8 +1864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initialSpeed: 15
   _increaseSpeed: 0.45
-  _playerScoreText: {fileID: 640996485}
-  _AIText: {fileID: 1033714072}
+  scoreManager: {fileID: 787554442}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
