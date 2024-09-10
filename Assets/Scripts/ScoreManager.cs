@@ -5,12 +5,11 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-   private int _playerScore;
-   private int _AIScore;
+    private int _playerScore;
+    private int _AIScore;
 
     public Text playerSccoreTXT;
     public Text AIScoreTXT;
-
 
     public void PlayerGoal()
     {
