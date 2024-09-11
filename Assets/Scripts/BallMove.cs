@@ -10,9 +10,12 @@ public class BallMove : MonoBehaviour
 
     public ScoreManager scoreManager;
 
+    public GameObject hitSFX;
+
     private int hitCounter;
     private Rigidbody2D _rb;
     private bool lastScorerWasPlayer = false;
+
 
     void Start()
     {
@@ -56,9 +59,15 @@ public class BallMove : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
-        if (collision.gameObject.name == "Player" || collision.gameObject.name == "EnmeyAI")
+        if (collision.gameObject.name == "Player")
         {
             PlayerBounce(collision.transform);
+            Instantiate(hitSFX, transform.position, transform.rotation);
+        }
+        else if (collision.gameObject.name == "EnemyAI")
+        {
+            PlayerBounce(collision.transform);
+            Instantiate(hitSFX, transform.position, transform.rotation);
         }
     }
 
@@ -77,5 +86,6 @@ public class BallMove : MonoBehaviour
             scoreManager.AIGoal();
             lastScorerWasPlayer = true; 
         }
+
     }
 }

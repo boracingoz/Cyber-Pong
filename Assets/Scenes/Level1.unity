@@ -878,6 +878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSccoreTXT: {fileID: 640996485}
   AIScoreTXT: {fileID: 1033714072}
+  winningScore: 5
 --- !u!1 &905477284
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,6 +1866,7 @@ MonoBehaviour:
   _initialSpeed: 15
   _increaseSpeed: 0.45
   scoreManager: {fileID: 787554442}
+  hitSFX: {fileID: 187257233493080802, guid: 071dd9786a370bf41b1895a1b811c7bf, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
