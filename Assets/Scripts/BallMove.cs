@@ -11,6 +11,7 @@ public class BallMove : MonoBehaviour
     public ScoreManager scoreManager;
 
     public GameObject hitSFX;
+    public AudioSource golSFX;
 
     private int hitCounter;
     private Rigidbody2D _rb;
@@ -73,7 +74,11 @@ public class BallMove : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (golSFX != null)
+        {
+            golSFX.Play();
+        }
+
         if (transform.position.x > 0)
         {
             ResetBall();
